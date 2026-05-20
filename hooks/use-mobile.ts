@@ -20,3 +20,5 @@ export function useIsMobile() {
 
   return isMobile
 }
+
+// {This is a test}
