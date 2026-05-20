@@ -1,5 +1,7 @@
-import React from "react";
+"use client";
+
 import { GraduationCap } from "lucide-react";
+import { motion } from "framer-motion";
 
 const EducationSection = () => {
   return (
@@ -8,25 +10,99 @@ const EducationSection = () => {
         <div className="flex items-center gap-4 mb-12">
           <div className="flex items-baseline gap-3 shrink-0">
             {/* <span className="text-sm font-medium text-primary">02</span> */}
-            <h2 className="text-4xl font-extrabold tracking-tight text-muted-foreground">
+            <motion.h2
+              initial={{ opacity: 0, x: -110 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.3,
+                delay: 0.3,
+                ease: [0.5, 1, 0.36, 1],
+              }}
+              className="text-4xl font-extrabold tracking-tight text-muted-foreground"
+            >
               Education
-            </h2>
+            </motion.h2>
           </div>
-          <div className="h-px flex-1 bg-border" />
+          <motion.div
+            initial={{ opacity: 0, x: -110 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.45,
+              delay: 0.3,
+              ease: [0.5, 1, 0.36, 1],
+            }}
+            className="h-px flex-1 bg-border"
+          />
         </div>
         {/* Content */}
         <div className="flex-1 flex items-center text-muted-foreground flex-col justify-center gap-4">
-          <div className="backdrop-blur-md p-5 bg-primary/10 rounded-lg">
+          <motion.div
+            initial={{ opacity: 0, y: 90 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.5,
+              delay: 0.35,
+              ease: [0.5, 1, 0.36, 1],
+            }}
+            className="backdrop-blur-md p-5 bg-primary/10 rounded-lg"
+          >
             <GraduationCap width={40} height={40} className="text-primary" />
-          </div>
-          <p className="text-3xl font-semibold text-primary">
+          </motion.div>
+          <motion.p
+            initial={{ opacity: 0, y: 90 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.5,
+              delay: 0.35,
+              ease: [0.5, 1, 0.36, 1],
+            }}
+            className="text-3xl font-semibold text-primary"
+          >
             Thammasat University
-          </p>
-          <p className="text-xl font-medium">
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.55,
+              delay: 0.35,
+              ease: [0.5, 1, 0.36, 1],
+            }}
+            className="text-xl font-medium"
+          >
             Bachelor of Science and Technology
-          </p>
-          <p className="text-xl font-medium">Computer Science Major</p>
-          <p className="text-xl font-medium">GPA : 3.37</p>
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 110 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: 0.35,
+              ease: [0.5, 1, 0.36, 1],
+            }}
+            className="text-xl font-medium"
+          >
+            Computer Science Major
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 120 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.65,
+              delay: 0.35,
+              ease: [0.5, 1, 0.36, 1],
+            }}
+            className="text-xl font-medium"
+          >
+            GPA : 3.37
+          </motion.p>
         </div>
       </div>
     </section>

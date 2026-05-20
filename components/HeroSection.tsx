@@ -1,7 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
-import { Button } from "./ui/button";
-import { ArrowUpRight, Mail, MapPin, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
@@ -9,23 +9,66 @@ const HeroSection = () => {
       <div className="flex h-[90vh] items-center justify-around pt-30">
         <div className="flex flex-col max-w-[40%]">
           <div className="space-y-4">
-            <p className="font-extrabold text-muted-foreground text-5xl">
+            <motion.p
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, ease: [0.5, 1, 0.36, 1] }}
+              className="font-extrabold text-muted-foreground text-5xl"
+            >
               Hi , Everyone 👋
-            </p>
-            <p className="font-semibold text-5xl text-muted-foreground">
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, x: -70 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.7,
+                delay: 0.2,
+                ease: [0.5, 1, 0.36, 1],
+              }}
+              className="font-semibold text-5xl text-muted-foreground"
+            >
               I'm Rattasat Onnomdee
-            </p>
-            <p className="font-medium text-lg text-muted-foreground leading-[1.8]">
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, x: -90 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.7,
+                delay: 0.3,
+                ease: [0.5, 1, 0.36, 1],
+              }}
+              className="font-medium text-lg text-muted-foreground leading-[1.8]"
+            >
               I'm a passionate about Data Engineering , AI/ML Engineer and
-              Devops Engineer. <br />I am also interested in Cloud Computing &
-              MLOps, And always finding new things to learn.
-            </p>
+              Devops Engineer. <br />
+              <motion.span
+                initial={{ opacity: 0, x: -110 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.7,
+                  delay: 0.45,
+                  ease: [0.5, 1, 0.36, 1],
+                }}
+              >
+                I am also interested in Cloud Computing & MLOps, And always
+                finding new things to learn.
+              </motion.span>
+            </motion.p>
           </div>
           <div className="flex items-center justify-start gap-5 mt-2">
             {/* <Button className="text-lg font-semibold p-5 rounded-xl cursor-pointer">
               Contact Me <ArrowUpRight />
             </Button> */}
-            <a href="https://github.com/chxmpizz">
+            <motion.a
+              initial={{ opacity: 0, x: -130 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.7,
+                delay: 0.5,
+                ease: [0.5, 1, 0.36, 1],
+              }}
+              href="https://github.com/chxmpizz"
+            >
               <Image
                 className="rounded-lg"
                 src="/github.svg"
@@ -34,8 +77,17 @@ const HeroSection = () => {
                 height={25}
               />
               {/* <ArrowUpRight className="h-4 w-4" /> */}
-            </a>
-            <a href="https://www.linkedin.com/in/rattasat-onnomdee-21726b2a0/">
+            </motion.a>
+            <motion.a
+              initial={{ opacity: 0, x: -110 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.7,
+                delay: 0.5,
+                ease: [0.5, 1, 0.36, 1],
+              }}
+              href="https://www.linkedin.com/in/rattasat-onnomdee-21726b2a0/"
+            >
               <Image
                 className="rounded-lg"
                 src="/linkedin.svg"
@@ -44,10 +96,18 @@ const HeroSection = () => {
                 height={25}
               />
               {/* <ArrowUpRight className="h-4 w-4" /> */}
-            </a>
+            </motion.a>
           </div>
         </div>
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.2,
+            ease: [0.5, 1, 0.36, 1],
+          }}
+        >
           <Image
             className="rounded-lg"
             src="/my_image.jpg"
@@ -55,7 +115,7 @@ const HeroSection = () => {
             width={300}
             height={300}
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

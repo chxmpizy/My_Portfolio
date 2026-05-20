@@ -1,6 +1,7 @@
-import React from "react";
+"use client";
 import { ExternalLink } from "lucide-react";
 import { projects } from "@/lib/projects";
+import { motion } from "framer-motion";
 
 export const ProjectSection = () => {
   return (
@@ -10,17 +11,45 @@ export const ProjectSection = () => {
         <div className="flex items-center gap-4 mb-12">
           <div className="flex items-baseline gap-3 shrink-0">
             {/* <span className="text-sm font-medium text-primary">03</span> */}
-            <h2 className="text-4xl font-extrabold tracking-tight text-muted-foreground">
+            <motion.h2
+              initial={{ opacity: 0, x: 110 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.3,
+                delay: 0.3,
+                ease: [0.5, 1, 0.36, 1],
+              }}
+              className="text-4xl font-extrabold tracking-tight text-muted-foreground"
+            >
               Projects
-            </h2>
+            </motion.h2>
           </div>
-          <div className="h-px flex-1 bg-border" />
+          <motion.div
+            initial={{ opacity: 0, x: 110 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.45,
+              delay: 0.3,
+              ease: [0.5, 1, 0.36, 1],
+            }}
+            className="h-px flex-1 bg-border"
+          />
         </div>
 
         {/* Project Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, x: 110 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.45 + (projects.indexOf(project) / 10),
+                delay: 0.3,
+                ease: [0.5, 1, 0.36, 1],
+              }}
               key={project.title}
               className="group rounded-xl border border-border bg-card p-8 flex flex-col justify-between transition-shadow duration-300 hover:shadow-lg"
             >
@@ -55,7 +84,7 @@ export const ProjectSection = () => {
                   <ExternalLink className="h-4 w-4" />
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

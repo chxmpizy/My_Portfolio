@@ -1,6 +1,7 @@
-import React from "react";
+"use client";
 import { Button } from "./ui/button";
 import { ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const ContactMe = () => {
   return (
@@ -14,18 +15,49 @@ const ContactMe = () => {
           </div>
         </div>
         <div className="flex flex-col items-center gap-5">
-          <p className="text-4xl text-center font-extrabold">
+          <motion.p
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.4,
+              delay: 0.2,
+              ease: [0.5, 1, 0.36, 1],
+            }}
+            className="text-4xl text-center font-extrabold"
+          >
             Let's talk about your project, idea, or just say hi.
-          </p>
-          <p className="text-lg text-muted-foreground">
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.5,
+              delay: 0.4,
+              ease: [0.5, 1, 0.36, 1],
+            }}
+            className="text-lg text-muted-foreground"
+          >
             I’m currently open to new opportunities, whether in full-time roles
             or freelance collaborations. If you’re looking for a dedicated and
             passionate developer to bring your ideas to life, I’d love to
             connect!
-          </p>
-          <Button className="text-lg font-semibold p-5 rounded-xl cursor-pointer">
-            Contact Me <ArrowUpRight />
-          </Button>
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: 0.6,
+              ease: [0.5, 1, 0.36, 1],
+            }}
+          >
+            <Button className="text-lg font-semibold p-5 rounded-xl cursor-pointer">
+              Contact Me <ArrowUpRight />
+            </Button>
+          </motion.div>
         </div>
       </div>
     </section>
