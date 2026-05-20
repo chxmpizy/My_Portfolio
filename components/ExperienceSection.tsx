@@ -57,7 +57,7 @@ const ExperienceSection = () => {
             className="absolute left-[5px] top-0 bottom-0 w-px bg-border"
           />
 
-          {experiences.map((exp, index) => (
+          {experiences.map((exp, _) => (
             <div key={`${exp.role}-${exp.company}`} className="relative pl-8">
               {/* Timeline Dot */}
               <motion.div
@@ -77,19 +77,17 @@ const ExperienceSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{
-                  duration: 0.55 + (experiences.indexOf(exp) * 0.1),
+                  duration: 0.55 + experiences.indexOf(exp) * 0.1,
                   delay: 0.3,
                   ease: [0.5, 1, 0.36, 1],
                 }}
               >
-                {" "}
                 <Card className="rounded-xl border border-border bg-card p-8">
                   {/* Top Row */}
                   <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-4">
                     <h3 className="text-xl font-bold">
                       {exp.role}
                       <span className="font-normal text-muted-foreground">
-                        {" "}
                         · {exp.company}
                       </span>
                     </h3>

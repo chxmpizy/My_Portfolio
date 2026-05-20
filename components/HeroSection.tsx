@@ -27,7 +27,7 @@ const HeroSection = () => {
               }}
               className="font-semibold text-5xl text-muted-foreground"
             >
-              I'm Rattasat Onnomdee
+              I&apos;m Rattasat Onnomdee
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: -90 }}
@@ -39,7 +39,7 @@ const HeroSection = () => {
               }}
               className="font-medium text-lg text-muted-foreground leading-[1.8]"
             >
-              I'm a passionate about Data Engineering , AI/ML Engineer and
+              I&apos;m a passionate about Data Engineering , AI/ML Engineer and
               Devops Engineer. <br />
               <motion.span
                 initial={{ opacity: 0, x: -110 }}

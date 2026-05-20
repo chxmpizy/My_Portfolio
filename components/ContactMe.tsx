@@ -26,7 +26,7 @@ const ContactMe = () => {
             }}
             className="text-4xl text-center font-extrabold"
           >
-            Let's talk about your project, idea, or just say hi.
+            Let&apos;s talk about your project, idea, or just say hi.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, x: -50 }}
@@ -39,10 +39,10 @@ const ContactMe = () => {
             }}
             className="text-lg text-muted-foreground"
           >
-            I’m currently open to new opportunities, whether in full-time roles
-            or freelance collaborations. If you’re looking for a dedicated and
-            passionate developer to bring your ideas to life, I’d love to
-            connect!
+            I&apos;m currently open to new opportunities, whether in full-time
+            roles or freelance collaborations. If you&apos;re looking for a
+            dedicated and passionate developer to bring your ideas to life,
+            I&apos;d love to connect!
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
