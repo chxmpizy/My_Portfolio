@@ -3,12 +3,19 @@ import { GraduationCap } from "lucide-react";
 
 const EducationSection = () => {
   return (
-    <section id="education">
-      <div className="h-auto">
-        <div className="flex items-center justify-center pt-30">
-          <h1 className="text-4xl font-extrabold">Education</h1>
+    <section id="education" className="py-24 px-6">
+      <div className="max-w-5xl mx-auto w-full flex flex-col min-h-[70vh]">
+        <div className="flex items-center gap-4 mb-12">
+          <div className="flex items-baseline gap-3 shrink-0">
+            <span className="text-sm font-medium text-primary">02</span>
+            <h2 className="text-4xl font-extrabold tracking-tight">
+              Education
+            </h2>
+          </div>
+          <div className="h-px flex-1 bg-border" />
         </div>
-        <div className="flex items-center flex-col mt-10 justify-center gap-4">
+        {/* Content */}
+        <div className="flex-1 flex items-center flex-col justify-center gap-4">
           <div className="backdrop-blur-md p-5 bg-primary/10 rounded-lg">
             <GraduationCap width={40} height={40} className="text-primary" />
           </div>
