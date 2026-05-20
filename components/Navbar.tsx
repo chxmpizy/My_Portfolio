@@ -39,7 +39,7 @@ export const Navbar = () => {
               className={`gap-10 text-lg font-semibold flex items-center duration-300 ${scrolled ? "text-base" : ""}`}
             >
               <li>
-                <a href="#aboutme">About Me</a>
+                <a href="#education">Education</a>
               </li>
               <li>
                 <a href="#projects">Projects</a>

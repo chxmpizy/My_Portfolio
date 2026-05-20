@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar } from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
 import ProjectSection from '@/components/ProjectSection'
-import AboutMeSection from '@/components/AboutMeSection'
+import AboutMeSection from '@/components/EducationSection'
 import ExperienceSection from '@/components/ExperienceSection'
 import SkillSection from '@/components/SkillSection'
 import ContactMe from '@/components/ContactMe'
@@ -15,7 +15,7 @@ const page = () => {
       </div>
       <HeroSection />
       <AboutMeSection />
-      
+
       <ProjectSection />
       <ExperienceSection />
       <SkillSection />
