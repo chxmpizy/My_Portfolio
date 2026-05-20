@@ -7,31 +7,38 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Atlas",
+    title: "AroaiD (ON Going)",
     description:
-      "A minimal note-taking app with bi-directional linking and a focus on writing flow. Built with local-first architecture.",
-    techStack: ["TypeScript", "Rust", "Tauri"],
-    link: "#",
+      "A minimal Nutrition Tracker application with a modern user interface, which help user track their daily nutrition intake and provides personalized recommendations.",
+    techStack: [
+      "React Native",
+      "Go",
+      "Tailwind CSS",
+      "AWS",
+      "Python",
+      "Docker",
+    ],
+    link: "https://github.com/chxmpizz/AroaiD",
   },
   {
-    title: "Cadence",
+    title: "WiGarn",
     description:
-      "Open-source CI/CD platform for monorepos. Smart caching, parallel execution, and a polished developer experience.",
-    techStack: ["Go", "React", "PostgreSQL"],
-    link: "#",
+      "a Resturant Review Website with the ability to search restaurants by location, cuisine, and rating.",
+    techStack: [
+      "Next.js",
+      "Elysia.js",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Docker",
+      "Github Actions",
+    ],
+    link: "https://github.com/chxmpizz/WiGarn",
   },
   {
-    title: "Prism",
+    title: "Distributed Log Analytics Pipeline (Future Work)",
     description:
-      "Design tokens manager that syncs across Figma, codebases, and documentation. Used by 300+ design teams.",
-    techStack: ["Next.js", "tRPC", "Prisma"],
-    link: "#",
-  },
-  {
-    title: "Quill Editor",
-    description:
-      "A rich text editor framework built on a custom CRDT. Real-time collaboration with offline support.",
-    techStack: ["TypeScript", "WebSockets", "Yjs"],
+      "Designed and implemented a scalable distributed log analytics pipeline for real-time log ingestion, processing, and analysis.",
+    techStack: ["Kafka", "Python", "Spark", "PostgreSQL", "Docker", "Grafana"],
     link: "#",
   },
 ];

@@ -6,6 +6,7 @@ import EducationSection from "@/components/EducationSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import { SkillSection } from "@/components/SkillSection";
 import ContactMe from "@/components/ContactMe";
+import Footer from "@/components/Footer";
 
 const page = () => {
   return (
@@ -20,6 +21,7 @@ const page = () => {
       <ExperienceSection />
       <SkillSection />
       <ContactMe />
+      <Footer />
     </div>
   );
 };

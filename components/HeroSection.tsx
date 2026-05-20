@@ -9,18 +9,22 @@ const HeroSection = () => {
       <div className="flex h-[90vh] items-center justify-around pt-30">
         <div className="flex flex-col max-w-[40%]">
           <div className="space-y-4">
-            <p className="font-extrabold text-5xl">Hi , Everyone 👋</p>
-            <p className="font-semibold text-5xl">I'm Rattasat Onnomdee</p>
-            <p className="font-medium text-lg leading-[1.8]">
+            <p className="font-extrabold text-muted-foreground text-5xl">
+              Hi , Everyone 👋
+            </p>
+            <p className="font-semibold text-5xl text-muted-foreground">
+              I'm Rattasat Onnomdee
+            </p>
+            <p className="font-medium text-lg text-muted-foreground leading-[1.8]">
               I'm a passionate about Data Engineering , AI/ML Engineer and
               Devops Engineer. <br />I am also interested in Cloud Computing &
               MLOps, And always finding new things to learn.
             </p>
           </div>
           <div className="flex items-center justify-start gap-5 mt-2">
-            <Button className="text-lg font-semibold p-5 rounded-xl cursor-pointer">
+            {/* <Button className="text-lg font-semibold p-5 rounded-xl cursor-pointer">
               Contact Me <ArrowUpRight />
-            </Button>
+            </Button> */}
             <a href="https://github.com/chxmpizz">
               <Image
                 className="rounded-lg"

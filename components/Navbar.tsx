@@ -4,6 +4,15 @@ import React, { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Download } from "lucide-react";
 
+const downloadResume = (url: string) => {
+  const link = document.createElement("a");
+  link.href = url;
+  link.setAttribute("download", "Rattasat_Resume.pdf");
+  document.body.appendChild(link);
+  link.click();
+  link.parentNode?.removeChild(link);
+};
+
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -20,7 +29,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <div className="fixed w-full">
+    <div className="fixed w-full text-muted-foreground">
       <div
         className={`flex justify-around items-center mt-5 transition-all duration-300 ease-in-out ${
           scrolled
@@ -54,7 +63,10 @@ export const Navbar = () => {
           </div>
         </nav>
         <div className="gap-4 flex-col items-center">
-          <Button className="cursor-pointer font-bold text-lg p-5">
+          <Button
+            className="cursor-pointer font-bold text-lg p-5"
+            onClick={() => downloadResume("/Rattasat_Resume.pdf")}
+          >
             Resume <Download />
           </Button>
         </div>

@@ -7,15 +7,15 @@ const EducationSection = () => {
       <div className="max-w-5xl mx-auto w-full flex flex-col min-h-[70vh]">
         <div className="flex items-center gap-4 mb-12">
           <div className="flex items-baseline gap-3 shrink-0">
-            <span className="text-sm font-medium text-primary">02</span>
-            <h2 className="text-4xl font-extrabold tracking-tight">
+            {/* <span className="text-sm font-medium text-primary">02</span> */}
+            <h2 className="text-4xl font-extrabold tracking-tight text-muted-foreground">
               Education
             </h2>
           </div>
           <div className="h-px flex-1 bg-border" />
         </div>
         {/* Content */}
-        <div className="flex-1 flex items-center flex-col justify-center gap-4">
+        <div className="flex-1 flex items-center text-muted-foreground flex-col justify-center gap-4">
           <div className="backdrop-blur-md p-5 bg-primary/10 rounded-lg">
             <GraduationCap width={40} height={40} className="text-primary" />
           </div>

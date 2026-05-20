@@ -8,8 +8,8 @@ export const SkillSection = () => {
         {/* Section Header */}
         <div className="flex items-center gap-4 mb-16">
           <div className="flex items-baseline gap-3 shrink-0">
-            <span className="text-sm font-medium text-primary">05</span>
-            <h2 className="text-4xl font-extrabold tracking-tight">
+            {/* <span className="text-sm font-medium text-primary">05</span> */}
+            <h2 className="text-4xl font-extrabold tracking-tight text-muted-foreground">
               Skills &amp; Tools
             </h2>
           </div>

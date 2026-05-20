@@ -10,12 +10,11 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     role: "Software Engineer Intern",
-    company: "Mee-Solution Consult",
+    company: "Mee-Solution Consulting",
     time: "June 2025 — July 2025",
     location: "Bangkok, TH",
     description:
-      "Shipped key features across the deployment dashboard and analytics. Improved core web vitals by 40% and led the migration to App Router.",
+      "Contributed to the development of Kaigai, a game-based learning web platform developed for MonkeyEveryday. Responsible for implementing user interface components and translating design concepts into functional and responsive web pages. Collaborated with senior developers to integrate frontend features with backend systems and improve overall usability.",
     link: "https://meesolution.com/th",
   },
-  
 ];

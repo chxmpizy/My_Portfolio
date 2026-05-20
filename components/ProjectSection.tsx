@@ -9,9 +9,9 @@ export const ProjectSection = () => {
         {/* Section Header */}
         <div className="flex items-center gap-4 mb-12">
           <div className="flex items-baseline gap-3 shrink-0">
-            <span className="text-sm font-medium text-primary">03</span>
-            <h2 className="text-4xl font-extrabold tracking-tight">
-              Selected Projects
+            {/* <span className="text-sm font-medium text-primary">03</span> */}
+            <h2 className="text-4xl font-extrabold tracking-tight text-muted-foreground">
+              Projects
             </h2>
           </div>
           <div className="h-px flex-1 bg-border" />
@@ -25,7 +25,9 @@ export const ProjectSection = () => {
               className="group rounded-xl border border-border bg-card p-8 flex flex-col justify-between transition-shadow duration-300 hover:shadow-lg"
             >
               <div>
-                <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
+                <h3 className="text-2xl font-bold mb-4 text-primary/90">
+                  {project.title}
+                </h3>
                 <p className="text-base text-muted-foreground leading-relaxed mb-6">
                   {project.description}
                 </p>
