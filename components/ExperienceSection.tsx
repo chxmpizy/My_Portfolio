@@ -6,13 +6,17 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const ExperienceSection = () => {
+  const isMobile = useIsMobile();
   return (
     <section id="experience" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
-        <div className="flex items-center gap-4 mb-12">
+        <div
+          className={`flex items-center gap-4 mb-6 md:mb-12 ${isMobile ? "justify-center" : "justify-start"}`}
+        >
           <div className="flex items-baseline gap-3 shrink-0">
             {/* <span className="text-sm font-medium text-primary">04</span> */}
             <motion.h2
@@ -29,48 +33,65 @@ const ExperienceSection = () => {
               Experience
             </motion.h2>
           </div>
-          <motion.div
-            initial={{ opacity: 0, x: -110 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.45,
-              delay: 0.3,
-              ease: [0.5, 1, 0.36, 1],
-            }}
-            className="h-px flex-1 bg-border"
-          />
+          {isMobile ? (
+            <></>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, x: -110 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.45,
+                delay: 0.3,
+                ease: [0.5, 1, 0.36, 1],
+              }}
+              className="h-px flex-1 bg-border"
+            />
+          )}
         </div>
 
         {/* Timeline */}
         <div className="relative flex flex-col gap-8">
           {/* Vertical Line */}
-          <motion.div
-            initial={{ opacity: 0, x: -110 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.45,
-              delay: 0.3,
-              ease: [0.5, 1, 0.36, 1],
-            }}
-            className="absolute left-[5px] top-0 bottom-0 w-px bg-border"
-          />
+          {isMobile ? (
+            <></>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, scaleY: 0 }}
+              whileInView={{ opacity: 1, scaleY: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: 0.3,
+                ease: [0.5, 1, 0.36, 1],
+              }}
+              style={{ originY: 0 }}
+              className="absolute left-[5px] top-0 bottom-0 w-px bg-border"
+            />
+          )}
 
           {experiences.map((exp, _) => (
-            <div key={`${exp.role}-${exp.company}`} className="relative pl-8">
+            <div
+              key={`${exp.role}-${exp.company}`}
+              className={`relative ${isMobile ? "" : "pl-8"}`}
+            >
               {/* Timeline Dot */}
-              <motion.div
-                initial={{ opacity: 0, x: -110 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.45,
-                  delay: 0.3,
-                  ease: [0.5, 1, 0.36, 1],
-                }}
-                className="absolute left-0 top-8 w-3 h-3 rounded-full bg-primary z-10"
-              />
+              {isMobile ? (
+                <></>
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.35,
+                    delay: 0.4,
+                    ease: [0.5, 1, 0.36, 1],
+                  }}
+                  className="absolute left-0 top-8 w-3 h-3 rounded-full bg-primary z-10"
+                />
+              )}
+
               {/* Card */}
               <motion.div
                 initial={{ opacity: 0, x: -110 }}

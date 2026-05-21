@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 const page = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <div className="sticky top-0 z-50">
         <Navbar />
       </div>

@@ -2,13 +2,18 @@
 import { ExternalLink } from "lucide-react";
 import { projects } from "@/lib/projects";
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const ProjectSection = () => {
+  const isMobile = useIsMobile();
+
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
-        <div className="flex items-center gap-4 mb-12">
+        <div
+          className={`flex items-center gap-4 mb-6 md:mb-12 ${isMobile ? "justify-center" : "justify-start"}`}
+        >
           <div className="flex items-baseline gap-3 shrink-0">
             {/* <span className="text-sm font-medium text-primary">03</span> */}
             <motion.h2
@@ -25,17 +30,21 @@ export const ProjectSection = () => {
               Projects
             </motion.h2>
           </div>
-          <motion.div
-            initial={{ opacity: 0, x: 110 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.45,
-              delay: 0.3,
-              ease: [0.5, 1, 0.36, 1],
-            }}
-            className="h-px flex-1 bg-border"
-          />
+          {isMobile ? (
+            <></>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, x: -110 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.45,
+                delay: 0.3,
+                ease: [0.5, 1, 0.36, 1],
+              }}
+              className="h-px flex-1 bg-border"
+            />
+          )}
         </div>
 
         {/* Project Grid */}
@@ -46,7 +55,7 @@ export const ProjectSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{
-                duration: 0.45 + (projects.indexOf(project) / 10),
+                duration: 0.45 + projects.indexOf(project) / 10,
                 delay: 0.3,
                 ease: [0.5, 1, 0.36, 1],
               }}

@@ -1,13 +1,18 @@
 "use client";
 import { skillCategories } from "@/lib/skills";
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const SkillSection = () => {
+  const isMobile = useIsMobile();
+
   return (
     <section id="skills" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
-        <div className="flex items-center gap-4 mb-16">
+        <div
+          className={`flex items-center gap-4 mb-6 md:mb-12 ${isMobile ? "justify-center" : "justify-start"}`}
+        >
           <div className="flex items-baseline gap-3 shrink-0">
             {/* <span className="text-sm font-medium text-primary">05</span> */}
             <motion.h2
@@ -24,21 +29,27 @@ export const SkillSection = () => {
               Skills &amp; Tools
             </motion.h2>
           </div>
-          <motion.div
-            initial={{ opacity: 0, x: 110 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.45,
-              delay: 0.3,
-              ease: [0.5, 1, 0.36, 1],
-            }}
-            className="h-px flex-1 bg-border"
-          />
+          {isMobile ? (
+            <></>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, x: -110 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.45,
+                delay: 0.3,
+                ease: [0.5, 1, 0.36, 1],
+              }}
+              className="h-px flex-1 bg-border"
+            />
+          )}
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+        <div
+          className={`grid ${isMobile ? "grid-cols-1" : "grid-cols-2 md:grid-cols-4"} gap-12`}
+        >
           {skillCategories.map((category) => (
             <div key={category.label}>
               <motion.h3

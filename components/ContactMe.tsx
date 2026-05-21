@@ -37,7 +37,7 @@ const ContactMe = () => {
               delay: 0.4,
               ease: [0.5, 1, 0.36, 1],
             }}
-            className="text-lg text-muted-foreground"
+            className="text-lg text-muted-foreground text-center"
           >
             I&apos;m currently open to new opportunities, whether in full-time
             roles or freelance collaborations. If you&apos;re looking for a
