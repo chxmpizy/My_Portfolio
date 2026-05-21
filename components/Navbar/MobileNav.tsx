@@ -81,14 +81,14 @@ const MobileNav = () => {
         ) : (
           <motion.div
             key="menu-button"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 20 }}
             transition={{
-              duration: 0.4,
+              duration: 0.5,
               ease: [0.32, 0.72, 0, 1],
             }}
-            className="flex justify-center items-center mt-5"
+            className="flex justify-end mx-4 items-center mt-5"
           >
             <Menu
               className="cursor-pointer bg-card/20 backdrop-blur-lg p-2 rounded-lg"
