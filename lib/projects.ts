@@ -28,10 +28,21 @@ export const projects: Project[] = [
     link: "https://github.com/chxmpizz/WiGarn",
   },
   {
-    title: "Distributed Log Analytics Pipeline (Future Work)",
+    title: "Electric Shuttle Route Optimization (Demo)",
     description:
       "Designed and implemented a scalable distributed log analytics pipeline for real-time log ingestion, processing, and analysis.",
-    techStack: ["Kafka", "Python", "Spark", "PostgreSQL", "Docker", "Grafana"],
-    link: "#",
+    techStack: [
+      "Python",
+      "Jupyter Notebook",
+      "Genetic Algorithm",
+      "Simulated Annealing",
+      "Particle Swarm Optimization",
+      "Ant Colony Optimization",
+      "NumPy",
+      "Pandas",
+      "Matplotlib",
+      "Git",
+    ],
+    link: "https://github.com/chxmpizy/Electric-Shuttle-Route-Optimization",
   },
 ];
