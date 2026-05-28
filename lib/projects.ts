@@ -7,20 +7,27 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Class schedule Optimization",
+    title: "Class Schedule Optimization",
     description:
       "Improved timetable generation under predefined constraints using a metaheuristic algorithm for optimization",
-    techStack: ["Jupyter Notebook", "Python"],
+    techStack: [
+      "Jupyter Notebook",
+      "Python",
+      "NumPy",
+      "Pandas",
+      "Matplotlib",
+      "Git",
+    ],
     link: "https://github.com/chxmpizy/Class_schedule",
   },
   {
     title: "WiGarn",
     description:
-      "a Resturant Review Website with the ability to search restaurants by location, cuisine, and rating.",
+      "Developed a restaurant review platform with search functionality based on location, cuisine, and ratings.",
     techStack: [
       "Next.js",
       "Elysia.js",
-      "PostgreSQL (with Neon)",
+      "PostgreSQL (Neon)",
       "Tailwind CSS",
       "Docker",
       "Github Actions",
@@ -30,18 +37,17 @@ export const projects: Project[] = [
   {
     title: "Electric Shuttle Route Optimization (Demo)",
     description:
-      "Designed and implemented a scalable distributed log analytics pipeline for real-time log ingestion, processing, and analysis.",
+      "Designed and evaluated metaheuristic algorithms to optimize electric shuttle routes and improve routing efficiency under predefined constraints.",
     techStack: [
       "Python",
       "Jupyter Notebook",
-      "Genetic Algorithm",
-      "Simulated Annealing",
-      "Particle Swarm Optimization",
-      "Ant Colony Optimization",
       "NumPy",
       "Pandas",
       "Matplotlib",
       "Git",
+      "Networkx",
+      "OSMNx",
+      "SUMO",
     ],
     link: "https://github.com/chxmpizy/Electric-Shuttle-Route-Optimization",
   },
