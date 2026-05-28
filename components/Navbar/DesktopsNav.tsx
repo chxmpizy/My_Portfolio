@@ -50,7 +50,7 @@ const DesktopsNav = ({ scrolled }: { scrolled: boolean }) => {
         <div className="gap-4 flex-col items-center">
           <Button
             className="cursor-pointer font-bold text-lg p-5"
-            onClick={() => downloadResume("/Rattasat_Resume.pdf")}
+            onClick={() => downloadResume("/Resume.pdf")}
           >
             Resume <Download />
           </Button>

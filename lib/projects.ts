@@ -7,18 +7,11 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "AroaiD (ON Going)",
+    title: "Class schedule Optimization",
     description:
-      "A minimal Nutrition Tracker application with a modern user interface, which help user track their daily nutrition intake and provides personalized recommendations.",
-    techStack: [
-      "React Native",
-      "Go",
-      "Tailwind CSS",
-      "AWS",
-      "Python",
-      "Docker",
-    ],
-    link: "https://github.com/chxmpizz/AroaiD",
+      "Improved timetable generation under predefined constraints using a metaheuristic algorithm for optimization",
+    techStack: ["Jupyter Notebook", "Python"],
+    link: "https://github.com/chxmpizy/Class_schedule",
   },
   {
     title: "WiGarn",
@@ -27,7 +20,7 @@ export const projects: Project[] = [
     techStack: [
       "Next.js",
       "Elysia.js",
-      "PostgreSQL",
+      "PostgreSQL (with Neon)",
       "Tailwind CSS",
       "Docker",
       "Github Actions",

@@ -71,7 +71,7 @@ const MobileNav = () => {
               >
                 <Button
                   className="cursor-pointer font-bold text-lg p-5"
-                  onClick={() => downloadResume("/Rattasat_Resume.pdf")}
+                  onClick={() => downloadResume("/Resume.pdf")}
                 >
                   Resume <Download />
                 </Button>

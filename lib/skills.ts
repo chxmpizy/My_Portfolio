@@ -6,45 +6,41 @@ export type SkillCategory = {
 export const skillCategories: SkillCategory[] = [
   {
     label: "LANGUAGES",
-    skills: [
-      "TypeScript",
-      "Java",
-      "Go",
-      "Python",
-      "SQL",
-      "JavaScript",
-      "HTML",
-      "CSS",
-    ],
+    skills: ["TypeScript", "Python", "SQL", "JavaScript", "HTML", "CSS"],
   },
   {
     label: "FRAMEWORKS",
     skills: [
       "React",
-      "React Native",
       "Next.js",
       "Tailwind CSS",
       "Node.js(Express.js)",
       "Nest.js",
-      "Gin",
       "Elysia.js",
-      "FastAPI",
     ],
   },
   {
     label: "DATABASE",
-    skills: ["PostgreSQL", "MongoDB", "Prisma ORM", "MySQL"],
+    skills: ["PostgreSQL", "MongoDB", "Prisma ORM", "MySQL", "Drizzle ORM"],
   },
   {
     label: "DEVOPS TOOLS",
-    skills: ["Docker", "Kubernetes", "Vercel", "AWS", "Git", "Github"],
+    skills: ["Docker", "AWS (Basic)", "Git", "Github", "Github Action"],
   },
   {
-    label: "DATA ENGINEER TOOLS",
+    label: "DATA ENGINEER TOOLS (Learning)",
     skills: ["Apache Airflow", "Apache Flink", "Apache Spark"],
   },
   {
     label: "TOOLS",
-    skills: ["Postman", "VS Code"],
+    skills: [
+      "Postman",
+      "VS Code",
+      "Vercel",
+      "Netlify",
+      "Jupyter Notebook",
+      "Neon",
+      "Supabase",
+    ],
   },
 ];
